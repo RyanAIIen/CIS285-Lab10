@@ -23,9 +23,17 @@ public class TestSelectionSort {
       assertArrayEquals(expectedSort, testSS.basicSelectionSort(arr));
     }
 
-    // @Test
-    // public void testMixed(){}
+    @Test
+    public void testMixed(){
+      int[] expectedSort = {-9, -7, 2, 8, 10};
+      int[] arr = {2, -7, 8, -9, 10};
+      assertArrayEquals(expectedSort, testSS.basicSelectionSort(arr));
+    }
 
-    // @Test
-    // public void testDuplicates(){}
+    @Test
+    public void testDuplicates(){
+      int[] expectedSort = {-9, -7, -7, 2, 8, 9, 10, 10};
+      int[] arr = {2, -7, 8, -9, 10, -7, 9, 10};
+      assertArrayEquals(expectedSort, testSS.basicSelectionSort(arr));
+    }
 }
